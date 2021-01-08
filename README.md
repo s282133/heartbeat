@@ -10,11 +10,11 @@ Timings are hard to evaluate on the virtual machine but I tried to get as close 
 
 ## deployment of the app
 Assuming that the machine is setup, the steps to be followed in order to deploy the app are: 
-  1) copy the directory into ~/poky/
+  1) copy the directory into _~/poky/_
   2) launch _source oe-init-build-env build_qemuarm/_
   3) in _/poky/build_qemuarm/conf/local.conf_ add the following lines:  
   "KERNEL_MODULE_AUTOLOAD += "mymodextended"   
   IMAGE_INSTALL_append = " heartbeat" 
   4) launch _bitbake core-image-minimal_
-  5) retrieve the app going to _/usr/bin
+  5) retrieve the app going to _/usr/bin_
   6) launch the app with _./heartbeat_app_
