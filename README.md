@@ -13,8 +13,10 @@ Assuming that the machine is setup, the steps to be followed in order to deploy 
   1) copy the directory into _~/poky/_
   2) launch _source oe-init-build-env build_qemuarm/_ command
   3) in _/poky/build_qemuarm/conf/local.conf_ add the following lines:  
+  IMAGE_INSTALL_append = " mymodextended"
   KERNEL_MODULE_AUTOLOAD += "mymodextended"   
   IMAGE_INSTALL_append = " heartbeat" 
+  4) bblayer
   4) launch _bitbake core-image-minimal_ command
   5) start qemuarm machine
   6) retrieve the app going to _/usr/bin_
