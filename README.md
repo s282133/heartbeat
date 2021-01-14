@@ -13,11 +13,12 @@ Assuming that the machine is setup, the steps to be followed in order to deploy 
   1) copy the directory into _~/poky/_
   2) launch _source oe-init-build-env build_qemuarm/_ command
   3) in _/poky/build_qemuarm/conf/local.conf_ add the following lines:  
-  IMAGE_INSTALL_append = " mymodextended"
+  IMAGE_INSTALL_append = " mymodextended"  
   KERNEL_MODULE_AUTOLOAD += "mymodextended"   
   IMAGE_INSTALL_append = " heartbeat" 
-  4) bblayer
-  4) launch _bitbake core-image-minimal_ command
-  5) start qemuarm machine
-  6) retrieve the app going to _/usr/bin_
-  7) launch the app with _./heartbeat_app_
+  4) in _/poky/build_qemuarm/conf/bblayers.conf_ add the line regarding the new layer to be added to the system:  
+   "/home/user/poky/meta-heartbeat \"
+  5) launch _bitbake core-image-minimal_ command
+  6) start qemuarm machine
+  7) retrieve the app going to _/usr/bin_
+  8) launch the app with _./heartbeat_app_
