@@ -10,7 +10,7 @@ Timings are hard to evaluate on the virtual machine but I tried to get as close 
 
 ## deployment of the app
 Assuming that the machine is setup, the steps to be followed in order to deploy the app are: 
-  1) copy *meta-heartbeat* layer into _~/poky/_
+  1) copy **meta-heartbeat** layer into _~/poky/_
   2) launch _source oe-init-build-env build_qemuarm/_ command
   3) in _/poky/build_qemuarm/conf/local.conf_ add the following lines:  
   IMAGE_INSTALL_append = " mymodextended"  
