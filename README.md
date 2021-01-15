@@ -9,6 +9,8 @@ Threads got defined as detached in order to save memory.
 Timings are hard to evaluate on the qemuarm but I tried to get as close as I could to the ideal timings by decreasing the parameter stating the idle time in usleep function, obtaining an error of 0.35%.
 
 ## deployment of the app
+In order to clone the layer, you can use the command _git clone https://github.com/s282133/heartbeat.git_  
+
 Assuming that the machine is setup, the steps to be followed in order to deploy the app are: 
   1) copy **meta-heartbeat** layer into _~/poky/_
   2) launch _source oe-init-build-env build_qemuarm_ command
